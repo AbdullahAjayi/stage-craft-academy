@@ -82,7 +82,9 @@ export default function Seminar() {
             </div>
             <div className="bg-gradient-to-br from-brand-accent/20 to-brand-accent/5 rounded-2xl p-12 border border-brand-accent/20 flex items-center justify-center min-h-80">
               <div className="text-center">
-                <div className="text-6xl mb-4">🎭</div>
+                <div className="text-6xl mb-4">
+                  🚀
+                </div>
                 <p className="text-brand-muted">Your transformation begins here</p>
               </div>
             </div>
