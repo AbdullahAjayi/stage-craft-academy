@@ -1,0 +1,30 @@
+node_modules
+.next
+out
+dist
+.env
+.env.local
+.env.*.local
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+coverage
+# Optional: OS metadata
+Thumbs.db
+# Optional: IDE/editor files
+.vscode
+.idea
+*.swp
+# Build/artifacts
+*.tsbuildinfo
+# Test output
+coverage
+# Misc
+*.tgz
+# Mac system files
+.DS_Store
