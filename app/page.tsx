@@ -48,7 +48,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-8 text-center text-sm text-brand-muted">
-          <p>© 2024 StageCraft Academy. All rights reserved.</p>
+          <p>© 2026 StageCraft Academy. All rights reserved.</p>
         </div>
       </footer>
     </div>
