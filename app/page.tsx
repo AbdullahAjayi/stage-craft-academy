@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="border-b border-white/10">
+      <header className="border-b border-black/10">
         <div className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
@@ -46,7 +46,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/10">
+      <footer className="border-t border-black/10">
         <div className="max-w-6xl mx-auto px-6 py-8 text-center text-sm text-brand-muted">
           <p>© 2026 StageCraft Academy. All rights reserved.</p>
         </div>

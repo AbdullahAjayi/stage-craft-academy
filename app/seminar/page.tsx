@@ -4,7 +4,7 @@ export default function Seminar() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="border-b border-white/10 sticky top-0 bg-brand-bg/95 backdrop-blur-sm z-50">
+      <header className="border-b border-black/10 sticky top-0 bg-white/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <Image
@@ -31,7 +31,7 @@ export default function Seminar() {
       {/* Hero Section */}
       <section className="px-6 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
-          <div className="inline-block px-3 py-1 bg-brand-accent/20 text-slate-300 text-xs rounded-full mb-6 font-medium">
+          <div className="inline-block px-3 py-1 bg-brand-accent/20 text-slate-800 text-xs rounded-full mb-6 font-medium">
             ⚡ Second Edition • Limited Seats
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -53,7 +53,7 @@ export default function Seminar() {
       </section>
 
       {/* The Transformation */}
-      <section className="px-6 py-16 md:py-24 bg-white/5 border-t border-b border-white/10">
+      <section className="px-6 py-16 md:py-24 bg-black/[0.03] border-t border-b border-black/10">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -97,32 +97,32 @@ export default function Seminar() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">What You'll Master</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-6 border border-white/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
+            <div className="p-6 border border-black/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
               <div className="text-2xl mb-3">🎯</div>
               <h3 className="text-xl font-semibold mb-2">Stage Presence</h3>
               <p className="text-brand-muted">Own the room from your first step. Learn body language, positioning, and the psychology of presence.</p>
             </div>
-            <div className="p-6 border border-white/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
+            <div className="p-6 border border-black/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
               <div className="text-2xl mb-3">📖</div>
               <h3 className="text-xl font-semibold mb-2">Story Architecture</h3>
               <p className="text-brand-muted">Structure narratives that captivate. Build emotional arcs that lead to action and retention.</p>
             </div>
-            <div className="p-6 border border-white/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
+            <div className="p-6 border border-black/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
               <div className="text-2xl mb-3">🎙️</div>
               <h3 className="text-xl font-semibold mb-2">Voice & Delivery</h3>
               <p className="text-brand-muted">Transform your vocal delivery into a powerful instrument. Master pacing, emphasis, and the art of the pause.</p>
             </div>
-            <div className="p-6 border border-white/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
+            <div className="p-6 border border-black/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
               <div className="text-2xl mb-3">💬</div>
               <h3 className="text-xl font-semibold mb-2">Audience Engagement</h3>
               <p className="text-brand-muted">Turn listeners into participants. Handle Q&A, build rapport, and create memorable interactions.</p>
             </div>
-            <div className="p-6 border border-white/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
+            <div className="p-6 border border-black/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
               <div className="text-2xl mb-3">⚡</div>
               <h3 className="text-xl font-semibold mb-2">Overcoming Fear</h3>
               <p className="text-brand-muted">Practical strategies to silence the inner critic. Real techniques for real speakers in real situations.</p>
             </div>
-            <div className="p-6 border border-white/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
+            <div className="p-6 border border-black/10 rounded-xl hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-all">
               <div className="text-2xl mb-3">🎬</div>
               <h3 className="text-xl font-semibold mb-2">Live Practice</h3>
               <p className="text-brand-muted">Apply everything in real-time. Get feedback, refine, and build muscle memory that lasts.</p>
@@ -132,13 +132,13 @@ export default function Seminar() {
       </section>
 
       {/* Social Proof - Edition 1 Results */}
-      <section className="px-6 py-16 md:py-24 bg-white/5 border-t border-b border-white/10">
+      <section className="px-6 py-16 md:py-24 bg-black/[0.03] border-t border-b border-black/10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">The First Edition Changed Lives</h2>
           <p className="text-center text-brand-muted mb-16 text-lg">What participants from Project Eloquencia 2025 experienced.</p>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-6 border border-white/10 rounded-xl">
+            <div className="p-6 border border-black/10 rounded-xl">
               <p className="text-brand-accent font-semibold mb-3 text-sm">⭐⭐⭐⭐⭐</p>
               <p className="text-brand-cream mb-4 italic">
                 "I went from avoiding meetings to leading them. The confidence I gained was worth every penny."
@@ -146,7 +146,7 @@ export default function Seminar() {
               <p className="text-sm font-semibold">Tosin, Founder</p>
               <p className="text-xs text-brand-muted">Tech Startup</p>
             </div>
-            <div className="p-6 border border-white/10 rounded-xl">
+            <div className="p-6 border border-black/10 rounded-xl">
               <p className="text-brand-accent font-semibold mb-3 text-sm">⭐⭐⭐⭐⭐</p>
               <p className="text-brand-cream mb-4 italic">
                 "From trembling before presentations to delivering pitches that win deals. This seminar changed everything."
@@ -154,7 +154,7 @@ export default function Seminar() {
               <p className="text-sm font-semibold">Amina, Creative Director</p>
               <p className="text-xs text-brand-muted">Marketing Agency</p>
             </div>
-            <div className="p-6 border border-white/10 rounded-xl">
+            <div className="p-6 border border-black/10 rounded-xl">
               <p className="text-brand-accent font-semibold mb-3 text-sm">⭐⭐⭐⭐⭐</p>
               <p className="text-brand-cream mb-4 italic">
                 "The techniques are practical and immediately applicable. I've already noticed the impact in my career."
@@ -200,14 +200,14 @@ export default function Seminar() {
       </section>
 
       {/* Pricing & Registration */}
-      <section id="register" className="px-6 py-16 md:py-24 bg-white/5 border-t border-white/10">
+      <section id="register" className="px-6 py-16 md:py-24 bg-black/[0.03] border-t border-black/10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">Secure Your Seat</h2>
           <p className="text-center text-brand-muted mb-12 text-lg">Limited availability for the second edition.</p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-12">
             {/* Registration Pass */}
-            <div className="p-8 border border-white/10 rounded-2xl">
+            <div className="p-8 border border-black/10 rounded-2xl">
               <h3 className="text-2xl font-bold mb-2">Registration Pass</h3>
               <p className="text-brand-muted mb-6">Core access to the complete seminar</p>
               <div className="mb-8">
@@ -290,22 +290,22 @@ export default function Seminar() {
           <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">Questions?</h2>
 
           <div className="space-y-6">
-            <div className="p-6 border border-white/10 rounded-xl">
+            <div className="p-6 border border-black/10 rounded-xl">
               <h3 className="font-semibold text-brand-cream mb-2">Is this for beginners?</h3>
               <p className="text-brand-muted">Yes and no. Whether you're starting from zero or already speak publicly, this program meets you where you are and takes you further. Everyone leaves as a more confident, effective communicator.</p>
             </div>
 
-            <div className="p-6 border border-white/10 rounded-xl">
+            <div className="p-6 border border-black/10 rounded-xl">
               <h3 className="font-semibold text-brand-cream mb-2">What if I have speech anxiety?</h3>
               <p className="text-brand-muted">This is exactly what the program addresses. We focus on practical techniques that help you manage anxiety and build genuine confidence through practice and feedback.</p>
             </div>
 
-            <div className="p-6 border border-white/10 rounded-xl">
+            <div className="p-6 border border-black/10 rounded-xl">
               <h3 className="font-semibold text-brand-cream mb-2">Can I access recordings if I miss a session?</h3>
               <p className="text-brand-muted">Yes. Both packages include lifetime access to all recordings, so you can review and catch up at your own pace.</p>
             </div>
 
-            <div className="p-6 border border-white/10 rounded-xl">
+            <div className="p-6 border border-black/10 rounded-xl">
               <h3 className="font-semibold text-brand-cream mb-2">When is this happening?</h3>
               <p className="text-brand-muted">Contact us at hello@stagecraft.academy for dates and details. We run sessions throughout the year with limited cohorts per program.</p>
             </div>
@@ -314,7 +314,7 @@ export default function Seminar() {
       </section>
 
       {/* Final CTA */}
-      <section className="px-6 py-16 md:py-24 bg-gradient-to-b from-brand-accent/10 to-transparent border-t border-white/10">
+      <section className="px-6 py-16 md:py-24 bg-gradient-to-b from-brand-accent/10 to-transparent border-t border-black/10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Your Voice Matters.</h2>
           <p className="text-xl text-brand-muted mb-8 max-w-2xl mx-auto">
@@ -330,7 +330,7 @@ export default function Seminar() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 px-6 py-12">
+      <footer className="border-t border-black/10 px-6 py-12">
         <div className="max-w-6xl mx-auto text-center text-sm text-brand-muted">
           <p>© 2026 StageCraft Academy. All rights reserved.</p>
           <p className="mt-2 text-xs">hello@stagecraft.academy</p>

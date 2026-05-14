@@ -9,13 +9,13 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          bg: '#161b21',
-          surface: 'rgba(24, 29, 36, 0.88)',
+          bg: '#ffffff',
+          surface: 'rgba(247, 247, 247, 0.95)',
           accent: '#990a04',
-          'accent-soft': '#570405',
-          cream: '#e4d5b4',
-          muted: '#bcb8a4',
-          text: '#f8f5ea',
+          'accent-soft': '#7a0803',
+          cream: '#111111',
+          muted: '#555555',
+          text: '#1a1a1a',
         },
       },
       fontFamily: {
