@@ -9,8 +9,7 @@
 
   body {
     @apply min-h-screen bg-brand-bg text-brand-text;
-    background: #ffffff;
-    /* background: radial-gradient(circle at top, rgba(153, 10, 4, 0.06), transparent 35%),
-      #ffffff; */
+    background: radial-gradient(circle at top, rgba(153, 10, 4, 0.06), transparent 35%),
+      #ffffff;
   }
 }
