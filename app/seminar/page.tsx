@@ -5,13 +5,8 @@ import { useState } from 'react'
 
 export default function Seminar() {
   const [selectedPackage, setSelectedPackage] = useState<'pass' | 'full' | null>(null);
-  const [hasCopied, setHasCopied] = useState(false);
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText("3135534712");
-    setHasCopied(true);
-    setTimeout(() => setHasCopied(false), 2000);
-  };
+  const FORM_URL = 'https://forms.gle/86oYQCSXMoUvWpdw9';
 
   const amountToPay = selectedPackage === 'pass' ? '₦5,000' : '₦10,000';
   const packageName = selectedPackage === 'pass' ? 'Registration Pass' : 'Full Package';
@@ -352,75 +347,65 @@ export default function Seminar() {
         </div>
       </footer>
 
-      {/* Payment Modal */}
+      {/* Registration Modal */}
       {selectedPackage && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
-          <div className="bg-white rounded-[2rem] w-full max-w-md overflow-hidden shadow-2xl relative animate-in zoom-in-95 duration-300">
-            <button 
-              onClick={() => setSelectedPackage(null)}
-              className="absolute top-5 right-5 w-8 h-8 flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors text-black/50 hover:text-black z-10"
-              aria-label="Close modal"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            
-            <div className="p-8 pb-6 border-b border-black/5">
-              <div className="inline-block px-3 py-1 bg-brand-accent/10 text-brand-accent text-xs rounded-full mb-4 font-semibold tracking-wide uppercase">
-                {packageName}
-              </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-1">Complete Payment</h3>
-              <p className="text-slate-500 text-sm">Transfer the exact amount below to secure your seat.</p>
-              
-              <div className="mt-6 flex items-baseline gap-2">
-                <span className="text-5xl font-bold text-slate-900">{amountToPay}</span>
-                <span className="text-slate-500 font-medium">NGN</span>
-              </div>
+        <div
+          className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-4 sm:p-6"
+          style={{ backgroundColor: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)' }}
+          onClick={(e) => { if (e.target === e.currentTarget) setSelectedPackage(null); }}
+        >
+          <div className="bg-white w-full max-w-md rounded-3xl overflow-hidden shadow-2xl">
+
+            {/* Modal header — accent bar */}
+            <div className="bg-brand-accent px-8 py-6 relative">
+              <button
+                onClick={() => setSelectedPackage(null)}
+                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-colors text-white"
+                aria-label="Close"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <p className="text-white/70 text-xs font-semibold uppercase tracking-widest mb-1">You selected</p>
+              <h3 className="text-white text-2xl font-bold">{packageName}</h3>
+              <p className="text-white/90 text-4xl font-bold mt-2">{amountToPay}</p>
             </div>
 
-            <div className="p-8 pt-6 bg-slate-50/50">
-              <div className="space-y-4 mb-8">
-                <div className="flex justify-between items-center py-3 border-b border-black/5">
-                  <span className="text-slate-500 text-sm">Bank Name</span>
-                  <span className="font-semibold text-slate-800">Firstbank Nig</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-black/5">
-                  <span className="text-slate-500 text-sm">Account Name</span>
-                  <span className="font-semibold text-slate-800">Haruna Abubakar</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-black/5">
-                  <span className="text-slate-500 text-sm">Account Number</span>
-                  <button 
-                    onClick={copyToClipboard}
-                    className="flex items-center gap-2 px-3 py-1.5 -mr-3 rounded-lg hover:bg-brand-accent/5 transition-colors group cursor-pointer"
-                    title="Copy to clipboard"
-                  >
-                    <span className="font-mono text-lg font-bold text-brand-accent">3135534712</span>
-                    {hasCopied ? (
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-green-600">
-                        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                      </svg>
-                    ) : (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-brand-accent/50 group-hover:text-brand-accent transition-colors">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
-                      </svg>
-                    )}
-                  </button>
-                </div>
-              </div>
+            {/* What's included */}
+            <div className="px-8 py-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">What&apos;s included</p>
+              <ul className="space-y-2.5 mb-8">
+                {selectedPackage === 'pass' ? (
+                  <>
+                    <li className="flex items-center gap-3 text-sm text-slate-700"><span className="text-brand-accent font-bold">✓</span> 12 hours of live training</li>
+                    <li className="flex items-center gap-3 text-sm text-slate-700"><span className="text-brand-accent font-bold">✓</span> Stage drills and practice</li>
+                    <li className="flex items-center gap-3 text-sm text-slate-700"><span className="text-brand-accent font-bold">✓</span> Peer feedback sessions</li>
+                    <li className="flex items-center gap-3 text-sm text-slate-700"><span className="text-brand-accent font-bold">✓</span> Digital resources</li>
+                  </>
+                ) : (
+                  <>
+                    <li className="flex items-center gap-3 text-sm text-slate-700"><span className="text-brand-accent font-bold">✓</span> Everything in Registration Pass</li>
+                    <li className="flex items-center gap-3 text-sm text-slate-700"><span className="text-brand-accent font-bold">✓</span> Premium T-shirt + Face cap</li>
+                    <li className="flex items-center gap-3 text-sm text-slate-700"><span className="text-brand-accent font-bold">✓</span> Priority seating</li>
+                    <li className="flex items-center gap-3 text-sm text-slate-700"><span className="text-brand-accent font-bold">✓</span> Lifetime recordings access</li>
+                  </>
+                )}
+              </ul>
 
-              <a 
-                href={`https://wa.me/2347032191882?text=${encodeURIComponent(`Hello! I just made a payment of ${amountToPay} for the StageCraft Academy ${packageName}. Here is my proof of payment:`)}`}
-                target="_blank" 
+              {/* Primary CTA */}
+              <a
+                href={FORM_URL}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full px-4 py-4 bg-[#25D366] text-white text-center rounded-xl font-medium hover:bg-[#128C7E] transition-colors items-center justify-center gap-3 shadow-lg shadow-[#25D366]/20 group"
+                className="flex w-full items-center justify-center gap-2 px-6 py-4 bg-brand-accent text-white rounded-xl font-bold text-base hover:bg-brand-accent-soft transition-colors shadow-lg shadow-brand-accent/20"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" className="group-hover:scale-110 transition-transform">
-                  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                Complete Your Registration
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                 </svg>
-                Send Proof of Payment
               </a>
+              <p className="text-center text-xs text-slate-400 mt-3">You&apos;ll be taken to a secure Google Form to complete your registration.</p>
             </div>
           </div>
         </div>
