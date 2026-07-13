@@ -393,19 +393,31 @@ export default function Seminar() {
                 )}
               </ul>
 
-              {/* Primary CTA */}
-              <a
-                href={FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex w-full items-center justify-center gap-2 px-6 py-4 bg-brand-accent text-white rounded-xl font-bold text-base hover:bg-brand-accent-soft transition-colors shadow-lg shadow-brand-accent/20"
-              >
-                Complete Your Registration
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                </svg>
-              </a>
-              <p className="text-center text-xs text-slate-400 mt-3">You&apos;ll be taken to a secure Google Form to complete your registration.</p>
+              {/* CTA — conditional on package */}
+              {selectedPackage === 'pass' ? (
+                <>
+                  <a
+                    href={FORM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center gap-2 px-6 py-4 bg-brand-accent text-white rounded-xl font-bold text-base hover:bg-brand-accent-soft transition-colors shadow-lg shadow-brand-accent/20"
+                  >
+                    Complete Your Registration
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </a>
+                  <p className="text-center text-xs text-slate-400 mt-3">You&apos;ll be taken to a secure Google Form to complete your registration.</p>
+                </>
+              ) : (
+                <div className="rounded-xl bg-amber-50 border border-amber-200 px-5 py-4 text-center">
+                  <p className="text-2xl mb-2">⏳</p>
+                  <p className="font-semibold text-amber-800 text-sm mb-1">Not Available Yet</p>
+                  <p className="text-amber-700 text-xs leading-relaxed">
+                    The Full Package is coming soon. In the meantime, secure your seat with the <strong>Registration Pass</strong> and we&apos;ll keep you updated.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
